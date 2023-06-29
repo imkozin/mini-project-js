@@ -1,0 +1,90 @@
+@import url('https://fonts.cdnfonts.com/css/sega-logo-font');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    background-image: url(nav-pattern.png);
+    background-color:#6BDF82;
+    display: flex;
+    width: 100%;
+    padding: 16px;
+}
+
+#logo {
+    font-family: 'SEGA LOGO FONT', sans-serif;
+    font-size: 2rem;
+    color: black;
+    margin: auto 0;
+    text-decoration: none;
+    position: relative;
+    left: 30px;
+}
+
+form {
+    margin-left: 100px;
+    border: 2px solid #6557CD;
+    width: 300px;
+    left: 25px;
+}
+
+input {
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    background-image: url(bg-pattern.png);
+    background-color: #6557CD;
+    /* background-attachment: fixed; */
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ------------Robot Card--------------- */
+.card {
+    background-image: url(card-pattern.png);
+    background-color: #4EC2C5;
+    font-family: 'Roboto';
+    box-shadow: 4px 4px 8px 4px black;
+    display: flex;
+    flex-direction: column;
+    height: 325px;
+    width: 275px;
+    border-radius: 10px;
+    margin: 25px;
+    transition: transform 0.3s ease-in-out;
+}
+
+img {
+    width: 225px;
+    margin: 10px auto;
+    background-color: #303952;
+    border-radius: 50%;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#message {
+    /* width: 500px;
+    height: 500px;
+    background-color: #10aa9d;
+    border-radius: 15px; */
+    color: #10aa9d;
+    font-family: 'SEGA LOGO FONT', sans-serif;
+    font-size: 70px;
+    margin-top: 100px;
+    margin-left: 300px;
+}
