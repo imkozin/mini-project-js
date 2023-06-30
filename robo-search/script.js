@@ -85,8 +85,8 @@ const robots = [
     }
 ];
 
+const getBody = document.querySelector('body');
 const getMain = document.querySelector('#main');
-// const message = document.querySelector('#message');
 
 function createCard(myArr) {
     myArr.forEach(robot => {
@@ -117,11 +117,15 @@ function searchRobot() {
     let input = document.querySelector('input');
     let search = input.value.toUpperCase();
     let newArr = robots.filter(robot => robot.name.toUpperCase().includes(search));
-    createCard(robots);
+    createCard(newArr);
+
+    const message = document.createElement('div');
+    message.setAttribute('id', 'message');
+    getMain.appendChild(message);
+
     if (newArr.length === 0) {
         message.innerText = 'Sorry, there is no robot with such name!'
     } else {
         message.innerText = '';
     }
-   
 }

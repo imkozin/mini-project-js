@@ -7,6 +7,12 @@
     padding: 0;
 }
 
+body {
+    background-image: url(bg-pattern.png);
+    background-color: #6557CD;
+    width: 100vw;
+}
+
 #navbar {
     background-image: url(nav-pattern.png);
     background-color:#6BDF82;
@@ -41,10 +47,6 @@ input {
 }
 
 #main {
-    background-image: url(bg-pattern.png);
-    background-color: #6557CD;
-    /* background-attachment: fixed; */
-    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -78,13 +80,11 @@ img {
 }
 
 #message {
-    /* width: 500px;
-    height: 500px;
-    background-color: #10aa9d;
-    border-radius: 15px; */
+    width: 100%;
     color: #10aa9d;
     font-family: 'SEGA LOGO FONT', sans-serif;
-    font-size: 70px;
-    margin-top: 100px;
-    margin-left: 300px;
+    font-size: 4em;
+    margin: 100px auto;
+    justify-content: center;
+    text-align: center;
 }
