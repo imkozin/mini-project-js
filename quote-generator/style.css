@@ -43,6 +43,7 @@ button {
     font-weight: bold;
     height: 215px;
     width: 100%;
+    text-align: justify;
 }
 
 p {

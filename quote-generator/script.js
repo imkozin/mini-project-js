@@ -54,8 +54,8 @@ function showQuote(arr) {
             block.innerHTML = '';
             block.appendChild(blockQuote);
             block.appendChild(author);
-        }
+        };
         previousQuote = randomQuote;
-}
+};
 
 button.addEventListener('click', () => showQuote(quotes));
