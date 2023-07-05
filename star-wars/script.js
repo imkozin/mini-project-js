@@ -82,7 +82,7 @@ async function getWorld(id) {
 
 
 function getNum() {
-    let num = Math.floor((Math.random() * 100) + 1);
+    let num = Math.floor((Math.random() * 83) + 1);
     // console.log("Random number is", num)
     return num
 }
