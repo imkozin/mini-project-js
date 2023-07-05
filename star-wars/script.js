@@ -11,10 +11,12 @@ async function getPerson() {
             const personHeight = personData.result.properties.height;
             const personGender = personData.result.properties.gender;
             const personBirth = personData.result.properties.birth_year;
-            // const personHome = personData.result.properties.homeworld;
-            // const planetId = /[^/]*$/.exec(personHome[0]);
-            // const planet = getWorld(planetId);
-            // console.log("planet", planet);
+            const personHome = personData.result.properties.homeworld;
+            console.log('home', personHome);
+            let planetId = /[^/]*$/.exec(personHome)[0];
+            // console.log('id', planetId)
+            const planet = await getWorld(planetId);
+            console.log("From planet", planet);
             document.getElementById("load").style.display = "none";
 
             const name = document.createElement('p');
@@ -29,21 +31,21 @@ async function getPerson() {
             const birth = document.createElement('p');
             birth.setAttribute('id', 'birth');
 
-            // const home = document.createElement('p');
-            // home.setAttribute('id', 'home');
+            const home = document.createElement('p');
+            home.setAttribute('id', 'home');
 
             name.textContent = personName;
             height.textContent = "Height: " + personHeight;
             gender.textContent = "Gender: " + personGender;
             birth.textContent = "Birth Year: " + personBirth;
-            // home.textContent = "Home World: " + planet;
+            home.textContent = "Home World: " + planet;
 
             data.textContent = "";
             data.appendChild(name);
             data.appendChild(height);
             data.appendChild(gender);
             data.appendChild(birth);
-            // data.appendChild(home);
+            data.appendChild(home);
 
             // pHome.textContent = "Home World: " + personWorld;
             // displayPerson(personData);
@@ -60,17 +62,17 @@ async function getPerson() {
     }
 }
 
-async function getWorld(id) {
+async function getWorld(planetId) {
     try {
-        const response = await fetch(`https://www.swapi.tech/api/planets/${id}`)
+        const response = await fetch(`https://www.swapi.tech/api/planets/${planetId}`)
         if (response.ok) {
             const personWorld = await response.json();
-            console.log(personWorld);
+            const home = personWorld.result.properties.name;
+            return home;
         } else {
             throw new Error ('issue with fetch');
-        }
-
-        return personWorld.result.properties.name;
+        } 
+        
     } catch (error) {
         if (error) {
             console.log('person wasn\'t found')
