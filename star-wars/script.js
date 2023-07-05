@@ -14,9 +14,9 @@ async function getPerson() {
             const personHome = personData.result.properties.homeworld;
             console.log('home', personHome);
             let planetId = /[^/]*$/.exec(personHome)[0];
-            // console.log('id', planetId)
+            console.log('id', planetId)
             const planet = await getWorld(planetId);
-            console.log("From planet", planet);
+            console.log("planet", planet);
             document.getElementById("load").style.display = "none";
 
             const name = document.createElement('p');
