@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Wars Web App Using AJAX API</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4119de242e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="container">
@@ -12,11 +13,13 @@
             <img src="/star-wars/logo.svg.png" alt="logo">
         </div>
         <div id="card">
-            <p id="name"></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <div id="load" class="fa-3x">
+                <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+                <p>Loading...</p>
+            </div>
+            <div id="data">
+               
+            </div>
         </div>
         <div id="btn">
             <button>Find Someone</button>
