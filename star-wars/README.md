@@ -1,6 +1,6 @@
 # Star Wars Web App Using AJAX API
 
-### Goals
+### Project Description
 The aim of this project was to learn how to build a single page application that uses AJAX to retrieve information, 
 and display it on the single-page website.
 
