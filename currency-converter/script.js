@@ -25,7 +25,7 @@ async function getCurrencies() {
     }
 }
 
-getCurrencies()
+// getCurrencies()
 
 async function convert(convertFrom, convertTo, amount) {
     try {
@@ -70,7 +70,7 @@ async function addCurrencies() {
     }
 }
 
-addCurrencies();
+// addCurrencies();
 
 async function switchCurrencies() {
     let first = document.querySelector("#from").value;
@@ -84,4 +84,4 @@ async function switchCurrencies() {
     }
 }
 
-switchCurrencies();
+// switchCurrencies();
