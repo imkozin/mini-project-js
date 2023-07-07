@@ -46,7 +46,6 @@ async function convert(convertFrom, convertTo, amount) {
     }
 }
 
-
 const btn = document.querySelector('button');
 
 btn.addEventListener('click', async function () {
