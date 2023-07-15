@@ -1,0 +1,13 @@
+GET http://localhost:8000/search
+
+###
+POST http://localhost:8000/search/title
+Content-Type: application/x-www-form-urlencoded
+
+category=birds&title=
+
+###
+# POST http://localhost:8000/search/category
+# Content-Type: application/json
+
+# {"category" : "fact"}
